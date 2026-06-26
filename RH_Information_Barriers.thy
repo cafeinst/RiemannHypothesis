@@ -6,8 +6,7 @@ Hypothesis. It makes no claim that the Riemann Hypothesis is unprovable in any f
 foundational system (such as ZFC or Peano Arithmetic). Rather, it shows that within any 
 abstract proof model satisfying the explicit assumptions collected in the locale 
 \texttt{RH\_Assumptions}, the Riemann Hypothesis is not provable. This development 
-formalizes and refines the central metamathematical ideas presented in the following 
-article:
+formalizes and refines the metamathematical framework developed in the following article:
 
 \bigskip\noindent Craig A. Feinstein, \emph{The Riemann Hypothesis is Unprovable},
 arXiv:math/0309367.
@@ -127,7 +126,7 @@ Riemann--Siegel function \( Z(t) \)) on the interval \( (0,T) \).
 While the argument principle provides a method for counting zeros in the
 critical strip, using strip-counting information to *derive* exact
 critical-line counts in a proof of the Riemann Hypothesis would be
-methodologically circular within this framework, as it would effectively
+circular within this framework, as it would effectively
 presuppose that all strip zeros lie on the critical line.
 Accordingly, we assume the existence of a global proof-length budget
 \[
