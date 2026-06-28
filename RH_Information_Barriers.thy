@@ -1,7 +1,7 @@
 text \<open>
 \section{Information--Theoretic Barriers for Proofs of the Riemann Hypothesis}
 
-This theory formalizes a conditional metamathematical barrier theorem for the Riemann 
+This Isabelle/HOL theory formalizes a conditional metamathematical barrier theorem for the Riemann 
 Hypothesis. It makes no claim that the Riemann Hypothesis is unprovable in any fixed 
 foundational system (such as ZFC or Peano Arithmetic). Rather, it shows that within any 
 abstract proof model satisfying the explicit assumptions collected in the locale 
@@ -105,22 +105,22 @@ solution counts can be established in only one of the following two ways:
 \end{itemize}
 
 \noindent A standard example of the latter is the equation \( \sin z = 0 \), whose solution
-set is explicitly characterized by \( z = n\pi \).
+set is explicitly characterized by \( z = n\pi \), where \(n\) ranges over the integers.
 The proof model further assumes that no analogous closed-form description can be derived
 from the critical-line equation,
 \[
   \zeta\!\left(\tfrac12 + it\right) = 0,
 \]
 in the sense of yielding an explicit characterization of all real solutions
-\( t \). This is not asserted as an analytic theorem about the zeta function. Rather, it is 
-an explicit assumption of the abstract proof model. Within this proof model, establishing 
-an exact identity
+\( t \). This is not asserted as an analytic theorem about the Riemann zeta function. 
+Rather, it is an explicit assumption of the abstract proof model. Within this proof model, 
+establishing an exact identity
 \[
   \texttt{count\_real\_zeros}(T) = n
 \]
 is treated as requiring certification effort that scales with \( n \).
-One concrete proxy for this effort is the verification of \( n \) distinct local
-events, such as sign changes of an auxiliary real function (e.g.\ the
+This effort is quantified by the verification of \(n\) distinct local events, 
+such as sign changes of an auxiliary real function (for example \ the
 Riemann--Siegel function \( Z(t) \)) on the interval \( (0,T) \).
 
 While the argument principle provides a method for counting zeros in the
@@ -174,8 +174,7 @@ text \<open>
 \emph{under the assumptions collected in the locale
 \texttt{RH\_Assumptions}}, the Riemann Hypothesis is not provable in the
 underlying abstract proof system. The argument is entirely conditional and
-metatheoretical. No analytic properties of the Riemann zeta function are used
-beyond the assumptions introduced earlier.
+metatheoretical.
 
 \subsection*{Idea of the Proof}
 
